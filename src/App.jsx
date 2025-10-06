@@ -3,12 +3,29 @@ import { ChatMessage } from './component/ChatMessage'
 import './App.css'
 
 function App() {
+  const chatMessages = [{
+    message: 'Hello chatBot',
+    sender: 'user'
+  }, {
+    message: 'hello how can i help you?',
+    sender: 'robot'
+  }, {
+    message: 'Hello chatBot',
+    sender: 'user'
+  }, {
+    message: 'hello how can i help you?',
+    sender: 'robot'
+  }];
+
+  const chatMessageComponent = chatMessages.map((chatMessage) => {
+    return (
+      <ChatMessage message={chatMessage.message} sender={chatMessage.sender}  />
+    )
+  });
+
   return (
     <>
-      <ChatMessage message='Hello chatBot' sender='user' />
-      <ChatMessage message='Hello how can i help you?' sender='robot'/>
-      <ChatMessage message='Hello chatBot' sender='user'/>
-      <ChatMessage message='Hello how can i help you?' sender='robot'/>
+      {chatMessageComponent}
       <ChatInput />
     </>
   )
