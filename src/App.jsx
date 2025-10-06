@@ -5,7 +5,10 @@ import './App.css'
 function App() {
   return (
     <>
-      <ChatMessage />
+      <ChatMessage message='Hello chatBot' sender='user' />
+      <ChatMessage message='Hello how can i help you?' sender='robot'/>
+      <ChatMessage message='Hello chatBot' sender='user'/>
+      <ChatMessage message='Hello how can i help you?' sender='robot'/>
       <ChatInput />
     </>
   )
