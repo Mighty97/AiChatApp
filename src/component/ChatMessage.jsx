@@ -1,9 +1,9 @@
 import UserProfileImage from '../assets/user.jpg'
 
-export function ChatMessage() {
+export function ChatMessage({message, sender}) {
   return (
     <div>
-      hello chatbot
+      {message}
       <img src={UserProfileImage} width={45} alt="" />
     </div>
   )
