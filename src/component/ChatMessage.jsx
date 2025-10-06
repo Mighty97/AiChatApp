@@ -6,7 +6,7 @@ export function ChatMessage({message, sender}) {
     <div>
       {sender ==='robot' && <img src={RobotProfileImage} alt="" width={45} /> }
       {message}
-      {sender ==='user' &&       <img src={UserProfileImage} width={45} alt="" />}
+      {sender ==='user' && <img src={UserProfileImage} width={45} alt="" />}
     </div>
   )
 }
