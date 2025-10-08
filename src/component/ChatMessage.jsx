@@ -4,10 +4,10 @@ import UserProfileImage from '../assets/user.jpg'
 
 export function ChatMessage({message, sender}) {
   return (
-    <>
-      {sender ==='robot' && <img src={RobotProfileImage} alt="robot_image" />} 
+    <div>
+      {sender ==='robot' && <img src={RobotProfileImage} alt="robot_image" width={45} />} 
       {message}
-      {sender ==='user' && <img src={UserProfileImage} alt="Use_image" /> }
-    </>
+      {sender ==='user' && <img src={UserProfileImage} alt="Use_image" width={45} /> }
+    </div>
   );
 }

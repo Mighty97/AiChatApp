@@ -1,21 +1,16 @@
-import React from "react";
+
 import { ChatMessage } from './ChatMessage'
 
-export function ChatMessages() {
-  const chatMessages = [{
-    message: 'Hi robot',
-    sender: 'user'
-  }, {
-    message: 'hello can i help you',
-    sender: 'robot'
-  }];
-
+export function ChatMessages({chatMessages}) {
   return (
-    <>
-      {chatMessages.map((message, sender) => {
-        <ChatMessage message={message} sender={sender} />
-      })
+    <div>
+      {chatMessages.map((chatMessage) => {
+        return (
+        <ChatMessage message={chatMessage.message} sender={chatMessage.sender} key={chatMessage.id} />
+      )})
     }
-    </>
+   
+    </div>
+ 
   );
 };
