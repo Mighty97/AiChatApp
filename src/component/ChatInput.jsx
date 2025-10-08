@@ -16,12 +16,13 @@ export function ChatInput({chatMessages, setChatMessages}) {
         id: crypto.randomUUID()
       }
     ]);
+    setInputText('');
   }
   
    
   return (
     <>
-      <input type="text" onChange={chatInputText} placeholder="Send a message to Chatbot..." />
+      <input type="text" onChange={chatInputText} value={inputText} placeholder="Send a message to Chatbot..." />
       <button onClick={sendMessage} >Send</button>
     </>
   )
