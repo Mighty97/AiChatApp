@@ -10,10 +10,14 @@
 .chat-messages-container {
   flex-grow: 1;
   overflow: scroll;
-  scrollbar-width: none;
   margin-bottom: 10px;
 }
 
+@supports (scrollbar-width: none) {
+  .chat-messages-container {
+    scrollbar-width: none;
+  }
+}
 .chat-input-button-container {
  margin-top: auto;
 }
