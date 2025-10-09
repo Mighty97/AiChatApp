@@ -1,0 +1,19 @@
+.chat-app-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  max-width: 550px;
+  height: 99vh;
+  padding: 0px 10px;
+}
+
+.chat-messages-container {
+  flex-grow: 1;
+  overflow: scroll;
+  scrollbar-width: none;
+  margin-bottom: 10px;
+}
+
+.chat-input-button-container {
+ margin-top: auto;
+}

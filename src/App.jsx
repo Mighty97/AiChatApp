@@ -23,10 +23,14 @@ function App() {
   }]
 );  
   return (
-    <>
-    <ChatMessages chatMessages={chatMessages} />
-    <ChatInput chatMessages={chatMessages} setChatMessages={setChatMessages} />
-    </>
+    <div className='chat-app-container'>
+      <div className='chat-messages-container' >
+        <ChatMessages chatMessages={chatMessages} />
+      </div>
+      <div className='chat-input-button-container' >
+        <ChatInput chatMessages={chatMessages} setChatMessages={setChatMessages} />
+      </div>
+    </div>
   )
 }
 

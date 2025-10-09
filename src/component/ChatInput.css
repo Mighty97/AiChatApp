@@ -1,7 +1,6 @@
 .chat-input-container {
   width: 100%;
   display: flex;
-  margin: 10px;
 }
 
 .chat-input-text {
@@ -10,10 +9,16 @@
   border-radius: 10px;
 }
 
+.chat-input-text::placeholder {
+  font-size: 14px;
+}
+
 .chat-send-button {
-  width: 70px;
+  width: 60px;
   margin-left: 5px;
   border-radius: 10px;
   border: none;
   background-color: rgb(10, 133, 75);
+  color: aliceblue;
+  font-weight: bold;
 }
