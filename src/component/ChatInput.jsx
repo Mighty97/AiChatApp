@@ -1,25 +1,35 @@
 import { useState } from "react";
-import { ChatMessages } from "./ChatMessages";
+import { Chatbot } from 'supersimpledev'
+// import { ChatMessages } from "./ChatMessages";
 
 export function ChatInput({chatMessages, setChatMessages}) {
    const [inputText,  setInputText] = useState('');
   function chatInputText(event) {
-    // console.log(event.target.value);
+    
     setInputText(event.target.value);
   }
   function sendMessage(){
-    console.log(inputText);
-    setChatMessages([
+    const newChatMessages = [
       ...chatMessages, {
         message: inputText,
         sender: 'user',
         id: crypto.randomUUID()
       }
-    ]);
-    setInputText('');
-  }
+    ];
   
-   
+    setChatMessages(newChatMessages);
+
+    const response = Chatbot.getResponse(inputText);
+    setChatMessages([
+      ...newChatMessages, {
+        message: response,
+        sender: 'robot',
+        id: crypto.randomUUID()
+      }
+    ]);
+
+    setInputText('');
+  } 
   return (
     <>
       <input type="text" onChange={chatInputText} value={inputText} placeholder="Send a message to Chatbot..." />
