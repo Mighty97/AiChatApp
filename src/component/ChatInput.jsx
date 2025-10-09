@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Chatbot } from 'supersimpledev'
-// import { ChatMessages } from "./ChatMessages";
+import './Chatinput.css'
 
 export function ChatInput({chatMessages, setChatMessages}) {
    const [inputText,  setInputText] = useState('');
@@ -31,9 +31,9 @@ export function ChatInput({chatMessages, setChatMessages}) {
     setInputText('');
   } 
   return (
-    <>
-      <input type="text" onChange={chatInputText} value={inputText} placeholder="Send a message to Chatbot..." />
-      <button onClick={sendMessage} >Send</button>
-    </>
+    <div className="chat-input-container" >
+      <input type="text" onChange={chatInputText} className="chat-input-text" value={inputText} placeholder="Send a message to Chatbot..." />
+      <button onClick={sendMessage}   className="chat-send-button" >Send</button>
+    </div>
   )
 }
