@@ -4,24 +4,14 @@ import { ChatInput } from './component/ChatInput'
 import './App.css'
 
 function App() {
-   const [chatMessages, setChatMessages] = useState([{
-    message: 'Hi robot',
-    sender: 'user',
-    id: crypto.randomUUID()
-  }, {
-    message: 'hello can i help you',
-    sender: 'robot',
-    id: crypto.randomUUID()
-  },{
-    message: 'Hi robot',
-    sender: 'user',
-    id: crypto.randomUUID()
-  }, {
-    message: 'hello can i help you',
+   const [chatMessages, setChatMessages] 
+   = useState([{
+    message: `Hi welcome. Currently, I only know how to flip a coin, roll a dice, or get today's date. Let me know how I can help!`,
     sender: 'robot',
     id: crypto.randomUUID()
   }]
 );  
+
   return (
     <div className='chat-app-container'>
       <div className='chat-messages-container' >

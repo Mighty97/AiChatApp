@@ -4,10 +4,11 @@ import './Chatinput.css'
 
 export function ChatInput({chatMessages, setChatMessages}) {
    const [inputText,  setInputText] = useState('');
+
   function chatInputText(event) {
-    
     setInputText(event.target.value);
   }
+
   function sendMessage(){
     const newChatMessages = [
       ...chatMessages, {
@@ -29,6 +30,7 @@ export function ChatInput({chatMessages, setChatMessages}) {
     ]);
 
     setInputText('');
+    
   } 
   return (
     <div className="chat-input-container" >
